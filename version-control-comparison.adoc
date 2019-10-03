@@ -194,4 +194,5 @@ Pros:
   people/repositories/issues/etc.
 
 Cons:
+
 - No cloud-hosting
