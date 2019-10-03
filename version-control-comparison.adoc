@@ -1,0 +1,197 @@
+= Hosting Software Development Version Control Systems
+Maurizio Tomasi, Davide Poletti
+Version 1.0, October 2019
+:creator: Maurizio Tomasi
+:imagesdir: ./images
+:doctype: article
+:pdf-page-size: a4
+:xrefstyle: short
+:checkedbox: pass:normal[X]
+
+== Change log
+
+- Version 1.0: October 2019. First release of the document.
+
+== Introduction and purpose
+
+We did not include SourceForge (https://sourceforge.net/) in the
+comparison, as it only hosts open-source projects and has no concept
+of private repository.
+
+== Overall results
+
+.Comparison table
+[options="header"]
+|==========================================================================
+|                     | GitHub       | BitBucket    | GitLab       | GitBucket      | Gitea
+| Website             | https://github.com/pricing | https://bitbucket.org/product/enterprise | https://about.gitlab.com/pricing/ | https://gitbucket.github.io/ | https://gitea.io/en-us/
+| Web hosting         | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox}
+| Supported VCS       | ``git`` | ``git`` | ``git`` | ``git`` | `git`
+| Free Private repositories |     | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox}
+| Free solution       | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox}
+| Commercial solution | {checkedbox} | {checkedbox} | {checkedbox} | |
+| Self-hosted         | {checkedbox} (paid version) | {checkedbox} (paid version) | {checkedbox} | {checkedbox} | {checkedbox}
+| Cloud-hosted        | {checkedbox} | {checkedbox} | {checkedbox} | | 
+| Pull requests       | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox}
+| Code reviews        | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox}
+| Issue tracker       | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox}
+| Integration with CI systems | {checkedbox} (via webhooks) | {checkedbox} | {checkedbox} | {checkedbox} (via plugins) | {checkedbox} (via webhooks)
+| Code coverage       | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox} (via webhooks) | {checkedbox}
+| Wiki                | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox} | {checkedbox}
+|==========================================================================
+
+Here is a description of the features:
+
+Web hosting:: The version history and files are accessible
+through a web browser. All the solutions described in this document
+provide this feature.
+Supported VCS:: List of the supported version control
+softwares. Nowadays, the most used is `git` and we probably do not
+need anything else.
+Website:: We indicate here the page detailing the pricing of the
+product, if applicable. For GitBucket, we provide the main page, as
+the product is free
+Free solution:: This box is checked if the program can be used without
+paying fees. Usually, this means that some limitations are in place,
+except for GitBucket (which does not provide a paid solution).
+Paid solution:: All of the products providing paid solutions have a
+free and an enterprise version. Pricing for the latter is never
+provided on the website; the user as to ask for a pricing.
+Self-hosted:: This refers to the possibility to install the product on
+one's own server, and it is an alternative to cloud hosting. The
+advantage is that everything is under the control of the
+collaboration. This can be a significant advantage: the Linux project
+was forced to abandon BitKeeper, their VCS platform, once BitKeeper
+changed their terms-of-use contract
+(https://en.wikipedia.org/wiki/Git#History). However, this requires
+manpower to install, configure, and deploy the system. (Once the
+system is deployed, the need of manpower usually reduces
+considerably.)
+Cloud-hosted:: A cloud-hosted solution does not need a server to run,
+as they are provided in the pricing. The advantage is that there is no
+manpower needed to run the system. On the other side, the source code
+is stored in someone else's repository. Also, this kind of solutions
+might prevent people living in some countries to access the
+repository. (E.g., people from Iran cannot use neither GitHub nor
+Bitbucket.)
+Pull requests:: When somebody proposes a fix or an improvement to the
+code, they can make a {ldquo}pull request{rdquo}: the new code is kept
+in a separate part of the repository, and it can be commented and
+reworked again and again until the maintainers think it's ok to merge
+in the code.
+Code reviews:: The solution offers facilities for people proposing
+changes to the code. They can post their own code and request
+comments, and the maintainers of the project can examine the proposal
+and discuss it in a forum.
+Issue tracker:: The solution offer a system to track issues in the
+code.
+Integration with CI systems:: The term {ldquo}CI{rdquo} means
+{ldquo}Continuous Integration{rdquo}. It is the possibility to
+automatically to configure the system so that any change to the
+software source code triggers the creation of virtual machine which
+downloads the code, compiles it, and runs a number of tests on it.
+Code coverage tools:: This is linked to the CI feature. When a test is ran
+on the virtual machine, code coverage tools check how much of the
+source code was actually tested, and they report if there are routines
+that have not been checked.
+Wiki:: The system includes a wiki to upload documentation.
+
+== Description of the solutions
+
+=== GitHub
+
+Famous repositories:
+
+- Visual Studio Code (https://github.com/microsoft/vscode)
+- Docker (https://github.com/docker)
+- Python (https://github.com/python/cpython)
+- iTerm2 (https://github.com/gnachman/iTerm2)
+
+Pros:
+
+- It is the most widely-used solution.
+- Easy to use
+- Many features and plugins
+- Academic licenses are available for free
+- Ability to quickly share short scripts and Jupyter notebooks without
+  creating a repository
+- Side-by-side diff comments
+
+Cons:
+
+- Private repositories are only in the paid subscription.
+- Although academic licenses are available for free, the maximum
+  number of private repositories is limited
+- Not clear how much does self-hosting cost
+
+=== BitBucket
+
+Pros:
+
+- Unlimited private repositories
+- Many plugins: code coverage, time tracking, etc.
+- It is an Atlassian product, so perhaps KEK already have access to
+  the paid version
+- Academic licenses are available for free
+- Ability to quickly share short scripts and Jupyter notebooks without
+  creating a repository
+
+Cons:
+
+- Web interface is not as polished as other solutions (e.g., no source
+  highlighting)
+- Private repositories are free only if the team consists of no more
+  than 5 people
+- Not as widely used as GitHub
+- Not as polished as GitHub
+
+=== GitLab
+
+Famous repositories:
+
+- Inkscape (https://gitlab.com/inkscape/inkscape)
+
+Pros:
+
+- The self-hosted solution is free
+- Already used by organizations in the LiteBIRD collaboration (IN2P3,
+  INAF)
+- Many plugins: code coverage, time tracking, etc.
+
+Cons:
+
+- Not as polished as GitHub
+- The free, cloud-hosted version limits the maximum number of CI runs
+  (2000 minutes/group/months, which roughly corresponds to 100-200
+  commits per month).
+- The self-hosted version seems to be tricky to install and deploy
+
+=== GitBucket
+
+See https://gitbucket.herokuapp.com/ for a live demo of how GitBucket
+looks.
+
+Pros:
+
+- Extremely easy to install and deploy: just download and run!
+- Made to look similar to GitHub (even in the web API!)
+- Being self-hosted and free, there are no limits to the number of
+  people/repositories/issues/etc.
+
+Cons:
+
+- No CI support
+- No cloud-hosting
+
+=== Gitea
+
+See https://try.gitea.io for a live demo of how Gitea looks.
+
+Pros:
+
+- Extremely easy to install and deploy: just download and run!
+- Being self-hosted and free, there are no limits to the number of
+  people/repositories/issues/etc.
+
+Cons:
+- No cloud-hosting
