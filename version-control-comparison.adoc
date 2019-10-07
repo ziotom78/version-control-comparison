@@ -206,7 +206,7 @@ than the cloud-based solution.
 
 === Integration with the wiki
 
-_Confluence_ (LiteBIRD wiki) is an Atlassian product. BitBucket is the Atlassian
+Confluence (LiteBIRD wiki) is an Atlassian product. _BitBucket_ is the Atlassian
 VCS and therefore is the solution that integrates best with the LiteBIRD wiki.
 Extending the deal that is in place for Confluence to Bitbucket could be
 relatively cheap (is it actually already included?).
