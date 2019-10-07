@@ -12,12 +12,6 @@ Version 1.0, October 2019
 
 - Version 1.0: October 2019. First release of the document.
 
-== Introduction and purpose
-
-We did not include SourceForge (https://sourceforge.net/) in the
-comparison, as it only hosts open-source projects and has no concept
-of private repository.
-
 == Overall results
 
 .Comparison table
@@ -196,3 +190,9 @@ Pros:
 Cons:
 
 - No cloud-hosting
+
+== Note
+
+We did not include SourceForge (https://sourceforge.net/) in the
+comparison, as it only hosts open-source projects and has no concept
+of private repository.
