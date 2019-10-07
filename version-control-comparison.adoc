@@ -200,7 +200,9 @@ popularity.
 
 BitBucket can be a (pricy) alternative (but see next point).
 
-*Remark.* Beyond the cost of the VCS software, hosting a VCS can be expensive --
+Gitea seems to be the easiest solution to install and deploy.
+
+*Remark.* Beyond the cost of the VCS software, hosting a VCS can be expensive,
 especially if you want to guarantee levels of security and reliability higher
 than the cloud-based solution.
 
@@ -214,7 +216,7 @@ relatively cheap (is it actually already included?).
 *Example.* Access control can be centralized. When a user is granted/revoked
 access, it propagates automatically to both the wiki and the VCS.
 
-=== Low entry-barrier for developpers
+=== Low entry-barrier for developers
 
 _GitHub_ is by considerable margin the VCS most people is familiar with. The user
 interface is very clean and intuitive.
@@ -224,7 +226,8 @@ new to most of the LiteBIRD members.
 === Free unlimited private repositories and collaborators
 
 _GitLab_ provides them. However, they are available also on _GitHub_, provided
-that we obtain the education's tool and services for researchers.
+that we obtain the education's tools and services for researchers
+(https://help.github.com/en/articles/about-github-education-for-educators-and-researchers).
 
 == Note
 
