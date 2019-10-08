@@ -12,7 +12,17 @@ Version 1.0, October 2019
 
 - Version 1.0: October 2019. First release of the document.
 
-== Overall results
+== Overview
+
+All the solutions considered satisfy the basic technical requirements:
+
+* code sharing
+* code versioning
+* web interface and basic tools for code developemnt cycle
+
+They have many differences but mostly on features that we may not necesarily exploit. This statement is based on the presumption that we will not enforce a very stif and advanced code development cycle.
+
+== Comparison table
 
 .Comparison table
 [options="header"]
